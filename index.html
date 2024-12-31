@@ -94,9 +94,8 @@
 
 .single-card h4, 
 .single-card ul, 
-.single-card li,
-.single card a{
-    color: black ;
+.single-card li {
+    color: black !important; /* Teks tetap putih untuk kontras */
 }
 
 
@@ -131,11 +130,11 @@
 }
 
 .single-card h4, .single-card ul, .single-card li, .single-card a {
-    color: black ; /* Pastikan semua teks berwarna putih */
+    color: black !important; /* Pastikan semua teks berwarna putih */
 }
 
 .card-top span, .card-buttons a {
-    color: black ; /* Warna putih untuk ikon dan tombol */
+    color: black !important; /* Warna putih untuk ikon dan tombol */
 }
 
 
@@ -153,7 +152,7 @@
     font-size: 1rem;
     margin: 0;
     text-transform: uppercase; /* Optional: Make text uppercase for better readability */
-    color: black;
+    color: black; /* Optional: Ensure the text is visible against the background */
 }
 
         .single-counter {
@@ -294,12 +293,27 @@ html, body {
             document.querySelector(".count-down-area").innerHTML = "<p>Countdown completed!</p>";
         }
     }, 1000);
+
+    window.addEventListener('load', function () {
+        // Get preloader element and audio element
+        const preloader = document.getElementById('preloader-active');
+        const audio = document.getElementById('background-audio');
+
+        // Remove preloader after a delay (optional)
+        setTimeout(() => {
+            preloader.style.display = 'none'; // Hide the preloader
+            audio.muted = false; // Unmute the audio
+        }, 1000); // Adjust the delay time if needed
+    });
+
 </script>
   
 
 </head>
 <body>
-<!-- Preloader Start -->
+
+    <audio src="/audio.mp3" autoplay loop style="display: none;"></audio>
+
 <div id="preloader-active">
     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="preloader-inner position-relative">
