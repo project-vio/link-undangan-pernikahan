@@ -100,8 +100,6 @@
 
 
 .single-card ul {
-    margin: 0;
-    padding: 0;
     list-style: none;
 }
 
@@ -122,7 +120,6 @@
 .single-card {
     position: relative;
     z-index: 2;
-    padding: 20px;
     background-color: rgba(255, 255, 255, 0.3); /* Transparansi tambahan untuk teks */
     border-radius: 10px;
     text-align: center;
@@ -241,15 +238,8 @@ font-family: "Amiri","Traditional Arabic",Tahoma,sans-serif;
 font-weight: normal;
 text-align: right;
 direction: rtl;
-
-
-
 }
 
-html, body {
-    height: 100%; /* Pastikan html dan body memiliki tinggi 100% */
-    margin: 0; /* Menghapus margin default */
-}
 
 .map-card {
     display: flex;
@@ -299,20 +289,13 @@ html, body {
         const preloader = document.getElementById('preloader-active');
         const audio = document.getElementById('background-audio');
 
-        // Remove preloader after a delay (optional)
-        setTimeout(() => {
-            preloader.style.display = 'none'; // Hide the preloader
-            audio.muted = false; // Unmute the audio
-        }, 1000); // Adjust the delay time if needed
-    });
-
 </script>
   
 
 </head>
 <body>
 
-    <audio src="/audio.mp3" autoplay loop style="display: none;"></audio>
+    <audio src="/audio.mp3" autoplay loop muted style="display: none;"></audio>
 
 <div id="preloader-active">
     <div class="preloader d-flex align-items-center justify-content-center">
@@ -375,10 +358,10 @@ html, body {
                     <div class="section-tittle text-center mb-70">
                         <h2>Our Love Story​</h2>
                         <img src="assets/img/gallery/tittle_img.png" alt="">
-                        <p class="arab">
+                        <p class="arab" style="padding-right: 50px;]">
 
                             وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةًۗ اِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ </p>
-                        <p style="font-size: 20px;">Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang.
+                        <p style="font-size: 20px; padding-right: 50px;">Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang.
                         Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir. <br>Ar-Rum · Ayat 21</p>
                     </div>
                 </div>
@@ -427,7 +410,7 @@ html, body {
     <div class="spacer" style="height: 450px;"></div>
 
 <!-- Wedding Info Section Start -->
-<section class="pricing-card-area section-bg" style="margin-left: 75px;" data-background="assets/img/gallery/section_bg1.png">
+<section class="pricing-card-area section-bg" style="margin-left: 50px; margin-right: 50px;" data-background="assets/img/gallery/section_bg1.png">
     <div class="container">
         <!-- Section Title -->
         <div class="row">
@@ -535,7 +518,7 @@ html, body {
 <footer>
     <!-- Footer Start-->
     <div class="footer-main" data-background="assets/img/gallery/section_bg4.png" style="width: 30rem;">
-        <div class="footer-area footer-padding">
+        <div class="footer-area ">
             <div class="container">
                 <div class="row d-flex justify-content-between">
                     <div class="col-xl-2  col-lg-3 col-md-5 col-sm-6">
